@@ -1,0 +1,117 @@
+body,html{
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    
+}
+
+.intro{
+    display: flex;
+    border: solid;
+    height:100%;
+    width:100%;
+    animation: 
+    lift-up 1s linear 7s forwards;
+    position: absolute;
+    background-color: white;
+    
+}
+
+.intro h1{
+    margin:auto;
+    font-size: 400%;
+    border-right: solid;
+    border-right-color: orange;
+    border-width: 5px;
+    text-align: center;
+    width:26%;
+    animation: 
+    grow 3.5s steps(14, end),
+    clicker 0.75s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;  
+    
+    
+}
+
+.content{
+    height: 100%; 
+    border:solid;
+    border-color: aqua;
+    display:flex;
+
+}
+.image{
+    display:flex;
+    width:50%;
+    border-color: chartreuse;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    width:50%;
+    border:solid;
+    border-color: rgb(81, 0, 255);
+    display:block;
+}
+
+#message3:hover{
+   
+    background: linear-gradient(
+            to right, #f32170, #f6f3f1);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    
+}
+
+.message h1{
+    border:solid;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+
+#headshot{
+    width:30%;
+    
+}
+
+.skills{
+    border:solid;
+    border-color: blue;
+}
+
+
+
+
+
+@keyframes lift-up {
+    from{transform: translateY(0%)}
+
+    to{transform: translateY(-100%)}
+    
+}
+
+@keyframes clicker {
+
+    to,from{
+        border-right-color: orange;
+    }
+
+    50%{
+        border-right-color:transparent;
+    }
+}
+
+@keyframes grow{
+    from{width:0%}
+    to{width:26%}
+}
+
+@keyframes caldwell{
+    from{color:red}
+    to{color:white}
+}
