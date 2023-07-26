@@ -7,111 +7,101 @@ body,html{
 }
 
 .intro{
-    display: flex;
-    border: solid;
-    height:100%;
     width:100%;
-    animation: 
-    lift-up 1s linear 7s forwards;
-    position: absolute;
-    background-color: white;
-    
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
+
 
 .intro h1{
-    margin:auto;
-    font-size: 400%;
-    border-right: solid;
-    border-right-color: orange;
-    border-width: 5px;
-    text-align: center;
-    width:26%;
-    animation: 
-    grow 3.5s steps(14, end),
-    clicker 0.75s linear infinite;
-    white-space: nowrap;
-    overflow: hidden;  
-    
-    
-}
-
-.content{
-    height: 100%; 
-    border:solid;
-    border-color: aqua;
-    display:flex;
-
-}
-.image{
-    display:flex;
-    width:50%;
-    border-color: chartreuse;
-    justify-content: center;
-    align-items: center;
-}
-
-.message{
-    width:50%;
-    border:solid;
-    border-color: rgb(81, 0, 255);
-    display:block;
-}
-
-#message3:hover{
+   text-align: center;
+   white-space: nowrap;
+   border-right:solid;
+   border-width:5px;
+   overflow: hidden;
    
-    background: linear-gradient(
-            to right, #f32170, #f6f3f1);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+
+}
+
+
+
+
+
+
+/*For smartphones */
+@media only screen and (min-width:300px) {
+    .intro h1{
+        font-size:40px;
+        width:240px; 
+        animation: grow1 3.5s steps(14, end),
+        clicker 0.75s linear infinite 
+    } 
+}
+
+/*For tablets */
+@media only screen and (min-width:600px) {
+    .intro h1{ 
+        font-size:50px;
+        width:300px;
+        animation: grow2 3.5s steps(14, end),
+        clicker 0.75s linear infinite
+    } 
+}
+
+
+/*For laptops 1000 -1600 px*/
+@media only screen and (min-width: 1000px) and (max-width:1600px) {
+
+    .intro h1{
+        font-size:70px;
+        width:430px;
+        animation: grow3 3.5s steps(14, end),
+        clicker 0.75s linear infinite
+       
+    } 
     
 }
 
-.message h1{
-    border:solid;
-    text-align: center;
-    font-size: 50px;
-}
 
 
 
-#headshot{
-    width:30%;
-    
-}
-
-.skills{
-    border:solid;
-    border-color: blue;
-}
-
-
-
-
-
-@keyframes lift-up {
-    from{transform: translateY(0%)}
-
-    to{transform: translateY(-100%)}
-    
-}
-
+/*For the cursor effect*/
 @keyframes clicker {
-
-    to,from{
-        border-right-color: orange;
+    from,to{
+        border-right-color:rgb(88, 88, 210) ;
     }
-
     50%{
         border-right-color:transparent;
-    }
+    }  
 }
 
-@keyframes grow{
+/*Type Writter Effect for Laptops*/
+@keyframes grow3 {
     from{width:0%}
-    to{width:26%}
+    to{width:430px}
+    
 }
 
-@keyframes caldwell{
-    from{color:red}
-    to{color:white}
+/*Type Writter Effect for tablets*/
+@keyframes grow2 {
+    from{width:0%}
+    to{width:300px}
+    
 }
+
+/*Type Writter Effect for phones*/
+@keyframes grow1 {
+    from{width:0%}
+    to{width:240px}
+    
+}
+
+
+
+
+
+
+
+
